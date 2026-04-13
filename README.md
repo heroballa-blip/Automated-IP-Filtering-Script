@@ -1,27 +1,164 @@
-# Security Scripts
+# Automated Security Toolkit
 
-A collection of Python security tools built to practice and demonstrate core cybersecurity engineering skills — log analysis, network monitoring, file integrity, and threat detection.
+A lightweight **cybersecurity toolkit** built in **Python** that analyzes logs, monitors systems, and detects suspicious activity across networks and files.
+This project combines multiple defensive security tools into a single repository to simulate real-world security monitoring and threat detection workflows.
 
-## Tools
+---
 
-| # | Tool | Description |
-|---|------|-------------|
-| 1 | [IP Filter & Log Analyzer](./1-ip-filter/) | Parse network logs, flag non-whitelisted and high-volume IPs |
-| 2 | [Port Scanner](./2-port-scanner/) | Multithreaded TCP scanner with service risk assessment |
-| 3 | [Real-Time Log Monitor](./3-log-monitor/) | Tail logs and alert on threat signatures in real time |
-| 4 | [File Integrity Monitor](./4-hash-checker/) | SHA-256 baseline + tamper detection for critical files |
-| 5 | [Connection Monitor](./5-connection-monitor/) | Inspect active network connections for suspicious activity |
+## Project Goal
 
-## Skills Demonstrated
+The goal of this project is to build a **modular security monitoring toolkit** that helps detect and analyze potential threats in a system or network environment.
 
-`Python` `Network Security` `Threat Detection` `Incident Response` `Log Analysis` `File Integrity` `TCP/IP` `Regex` `Multithreading` `Cryptography`
+This includes:
 
-## Lessons Learned
-- Learned how to parse logs efficiently using regex
-- Improved understanding of network ports and threats
-- Faced challenges with handling across systems
+* Detecting **suspicious IP activity** from logs
+* Monitoring **real-time system logs** for attack patterns
+* Identifying **open ports and exposed services**
+* Tracking **file integrity changes**
+* Analyzing **active network connections**
 
-## About
+---
 
-Built by Harsha Balla — Cybersecurity Engineering student at George Mason University.  
-Security+ Certified | CTF Challenge Developer (HAXFAX) | [LinkedIn](https://linkedin.com/in/harshaballa)
+## Project Structure
+
+```
+Automated-IP-Filtering-Script/
+│
+├── ip_filter.py
+├── log_monitor.py
+├── connection_monitor.py
+├── hash_checker.py
+├── port_scanner.py
+│
+├── sample_log.txt
+├── whitelist.txt
+├── baseline.json
+│
+├── .gitignore
+├── LICENSE
+├── README.md
+```
+
+---
+
+## Tech Stack
+
+* Python (3.9+)
+* Standard Libraries:
+
+  * socket
+  * hashlib
+  * subprocess
+  * argparse
+  * threading (concurrent.futures)
+* Linux networking tools (`ss`, `netstat`)
+
+---
+
+## Features
+
+* **IP Log Analyzer**
+
+  * Flags non-whitelisted IPs
+  * Detects high request volume activity
+
+* **Real-Time Log Monitor**
+
+  * Detects:
+
+    * Brute force attacks
+    * SQL injection attempts
+    * Directory traversal
+    * Malware indicators
+
+* **Connection Monitor**
+
+  * Analyzes active network connections
+  * Flags suspicious ports and foreign connections
+
+* **File Integrity Monitor (FIM)**
+
+  * Creates baseline hashes
+  * Detects modified or deleted files
+
+* **Port Scanner**
+
+  * Scans for open ports
+  * Identifies services
+  * Assigns risk levels
+
+---
+
+## Installation Instructions
+
+---
+
+## Installation Guide
+
+### 1. Prerequisites
+
+Make sure you have:
+
+* **Python 3.9+**
+* Linux or macOS (recommended for networking tools)
+* Basic terminal access
+
+---
+
+### 2. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/Automated-IP-Filtering-Script.git
+cd Automated-IP-Filtering-Script
+```
+
+---
+
+### 3. Run the Scripts
+
+No external dependencies required (uses built-in Python libraries).
+
+---
+
+## Usage
+
+### Run IP Filter
+
+```bash
+python3 ip_filter.py
+```
+
+### Run Log Monitor
+
+```bash
+python3 log_monitor.py sample_auth.log
+```
+
+### Run Connection Monitor
+
+```bash
+python3 connection_monitor.py
+```
+
+### Run File Integrity Monitor
+
+```bash
+# Create baseline
+python3 hash_checker.py --baseline /path/to/files
+
+# Verify integrity
+python3 hash_checker.py --verify
+```
+
+### Run Port Scanner
+
+```bash
+python3 port_scanner.py example.com
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
