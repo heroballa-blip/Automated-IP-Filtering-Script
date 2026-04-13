@@ -16,6 +16,11 @@ A collection of Python security tools built to practice and demonstrate core cyb
 
 `Python` `Network Security` `Threat Detection` `Incident Response` `Log Analysis` `File Integrity` `TCP/IP` `Regex` `Multithreading` `Cryptography`
 
+## Lessons Learned
+- Learned how to parse logs efficiently using regex
+- Improved understanding of network ports and threats
+- Faced challenges with handling across systems
+
 ## About
 
 Built by Harsha Balla — Cybersecurity Engineering student at George Mason University.  
