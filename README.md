@@ -1,21 +1,21 @@
 # Automated Security Toolkit
 
-A lightweight **cybersecurity toolkit** built in **Python** that analyzes logs, monitors systems, and detects suspicious activity across networks and files.
+A lightweight cybersecurity toolkit built in Python that analyzes logs, monitors systems, and detects suspicious activity across networks and files.
 This project combines multiple defensive security tools into a single repository to simulate real-world security monitoring and threat detection workflows.
 
 ---
 
 ## Project Goal
 
-The goal of this project is to build a **modular security monitoring toolkit** that helps detect and analyze potential threats in a system or network environment.
+The goal of this project is to build a modular security monitoring toolkit that helps detect and analyze potential threats in a system or network environment.
 
 This includes:
 
-* Detecting **suspicious IP activity** from logs
-* Monitoring **real-time system logs** for attack patterns
-* Identifying **open ports and exposed services**
-* Tracking **file integrity changes**
-* Analyzing **active network connections**
+* Detecting suspicious IP activity from logs
+* Monitoring real-time system logs for attack patterns
+* Identifying open ports and exposed services
+* Tracking file integrity changes
+* Analyzing active network connections
 
 ---
 
@@ -99,7 +99,7 @@ Automated-IP-Filtering-Script/
 
 Make sure you have:
 
-* **Python 3.9+**
+* Python 3.9+
 * Linux or macOS (recommended for networking tools)
 * Basic terminal access
 
